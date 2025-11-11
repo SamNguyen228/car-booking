@@ -1,0 +1,161 @@
+.navigation-bar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.logo-icon img {
+  width: 100px;
+  height: 60px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: rgba(17, 144, 212, 1);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.nav-item.active {
+  background-color: #1190d4;
+  color: #fff;
+}
+
+.search-icon-btn {
+  background-color: #FFA901;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon-btn:hover {
+  background-color: #c38303;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #1565c0;
+  z-index: 1001;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.side-menu-header .logo-vivu,
+.side-menu-header .logo-today {
+  color: white;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.side-menu-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.side-nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.side-nav-item:hover,
+.side-nav-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
