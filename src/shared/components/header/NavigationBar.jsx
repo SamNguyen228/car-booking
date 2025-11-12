@@ -9,9 +9,12 @@ const NavigationBar = () => {
   const menuItems = [
     { label: "TRANG CHỦ", path: "/" },
     { label: "GIỚI THIỆU", path: "/introduce" },
+    { label: "THÔNG TIN NHÀ XE", path: "/garage" },
     { label: "BẾN XE", path: "/bus-station" },
+    { label: "BÀI VIẾT", path: "/post" },
     { label: "TUYẾN ĐƯỜNG", path: "/routes" },
     { label: "KIỂM TRA VÉ", path: "/check-ticket" },
+    { label: "ĐẶT VÉ", path: "/book-ticket" },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
